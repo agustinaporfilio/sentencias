@@ -11,3 +11,7 @@ GRANT SELECT ON Gimnasios.* TO 'user1@localhost';
 -- Otorgar permisos de lectura, insercion y modificacion de datos de la DB al user2
 GRANT SELECT, INSERT, UPDATE ON Gimnasios.* TO 'user2@localhost';
 
+-- Quitar permisos de DELETE a ambos usuarios
+REVOKE DELETE ON *.* FROM 'user1@localhost';
+
+REVOKE DELETE ON *.* FROM 'user2@localhost';
